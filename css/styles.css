@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Antonio:wght@100..700&family=Oxygen:wght@300;400;700&display=swap');
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.container2{
+    width: 100vw;
+}
+
+.container3{
+    display: flex;
+    flex-direction: column;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+ul a {
+    text-decoration: none;
+}
+
+.container4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+button {
+    width: 50%; 
+}
+
+img {
+    width: 50%;
+}
+
+h1 {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+}
+
+h2 {
+    font-family: "Antonio", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: 27;
+}
+
+h3 {
+    font-family: "Antonio", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: 22;
+}
+
+p, a {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+}
+
+@media screen and (min-width: 640px) {
+    .container{
+        padding: 10px;
+    }
+
+    .container2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .container3{
+        flex-direction: row;
+    }
+}
