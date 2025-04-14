@@ -3,10 +3,14 @@
 .container{
     display: flex;
     flex-direction: column;
+    width: 100vw;
 }
 
 .container2{
     width: 100vw;
+    background-color: #4B9CD3;
+    padding: 0px 15px;
+    margin-bottom: 20px;
 }
 
 .container3{
@@ -26,15 +30,36 @@ ul a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-content: center;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
 button {
-    width: 50%; 
+    margin: 10px;
+    border-radius: 5px;
+    width: 100px;
 }
 
 img {
     width: 50%;
+}
+
+.container5 {
+    display: flex;
+    flex-direction: row;
+}
+
+.container6 {
+    border: solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.container7 {
+    width: 100vw;
+    background-color: #4B9CD3;
+    padding: 0px 15px;
 }
 
 h1 {
@@ -81,5 +106,9 @@ p, a {
 
     .container3{
         flex-direction: row;
+    }
+
+    .item1 {
+        margin-left: 15px;
     }
 }
