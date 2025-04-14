@@ -1,32 +1,73 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Antonio:wght@100..700&family=Oxygen:wght@300;400;700&display=swap');
 
-.container{
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
+/* Style Setup */
+
+:root {
+
+    /* These are temporary colors for now, later on we'll change them */
+
+    --primary-color: #4B9CD3;
+    --secondary-color: #F2F2F2;
+    --tertiary-color: #FFFFFF;
+    --text-color: #000000;
+    --accent-color: #FF5733;
+
+    /* To use the colors do the following
+    property: var(--primary-color); or whatever color you want to use */
 }
 
-.container2{
+h1 {
+    font: normal 400 1.875rem "Anton", sans-serif;
+}
+
+h2 {
+    font: normal 400 1.6875rem "Antonio", sans-serif;
+}
+
+h3 {
+    font: normal 400 1.375rem "Antonio", sans-serif;
+}
+
+p, a {
+    font: normal 400 1rem "Oxygen", sans-serif;
+}
+
+/* Cleaned up some styling for fonts */
+
+/* Style Setup End */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    font-family: "Oxygen", sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header/Nav */
+
+header {
     width: 100vw;
-    background-color: #4B9CD3;
+    background-color: var(--primary-color);
     padding: 0px 15px;
     margin-bottom: 20px;
+    box-sizing: border-box;
 }
 
-.container3{
+.nav-items {
     display: flex;
     flex-direction: column;
-}
-
-ul li {
     list-style-type: none;
 }
 
-ul a {
+.nav-items a {
     text-decoration: none;
+    color: var(--text-color);
 }
 
-.container4 {
+section.hero {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -44,71 +85,38 @@ img {
     width: 50%;
 }
 
-.container5 {
+div.hero-buttons {
     display: flex;
     flex-direction: row;
 }
 
-.container6 {
+section.events {
     border: solid black;
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 20px;
 }
 
-.container7 {
+footer {
     width: 100vw;
-    background-color: #4B9CD3;
+    background-color: var(--primary-color);
     padding: 0px 15px;
 }
 
-h1 {
-    font-family: "Anton", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 30px;
-}
-
-h2 {
-    font-family: "Antonio", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-    font-size: 27;
-}
-
-h3 {
-    font-family: "Antonio", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-    font-size: 22;
-}
-
-p, a {
-    font-family: "Oxygen", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 16px;
-}
-
 @media screen and (min-width: 640px) {
-    .container{
-        padding: 10px;
-    }
 
-    .container2 {
+    header {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
     }
 
-    .container3{
+    .nav-items {
         flex-direction: row;
     }
 
-    .item1 {
+    .nav-items li {
         margin-left: 15px;
     }
 }
