@@ -1,1 +1,1 @@
-# comp-126-final-project
+# This is a informational site for UNC's Korean-American Student Association
