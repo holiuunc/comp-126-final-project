@@ -182,6 +182,13 @@ main {
     margin-bottom: 20px;
 }
 
+/* FAQ Section */
+
+.faq {
+    display: flex;
+    flex-direction: column;
+}
+
 /* Footer */
 
 footer {
