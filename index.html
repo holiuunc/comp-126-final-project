@@ -8,8 +8,15 @@
 </head>
 <body>
     <header>
-        <h1>Korean-American Student Association</h1>
-        <nav>
+        <div class="logo-container">
+            <a href="index.html"><img class="logo" src="assets/KASA-LOGO.png" alt="KASA Logo"></a>
+        </div>
+        <div class="hamburger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav class="nav-menu">
             <ul class="nav-items">
                 <li><a href="about.html">About</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
@@ -20,29 +27,32 @@
   
     <main>
         <section class="hero">
-            <img src="assets/KASA-LOGO.png">
-            <p>Our organization seeks to promote cultural, political, and social awareness about the 
-                Korean American community both on the UNC-CH campus and in the community at large; 
-                KASA strives to establish a safe space for both students to celebrate our heritage and 
-                discover new aspects of cultural and political identity. Membership is open to any and 
-                all who are interested in Korean American issues!</p>
+            <h1>Korean-American Student Association</h1>
+            <img class="main-logo" src="assets/group_photo.JPG" alt="Group Photo of KASA Officers">
+            <p>KASA seeks to promote cultural, political, and social awareness about the Korean American community on the UNC-CH campus and in the community at large. KASA strives to establish a safe space for both students to celebrate our heritage and discover new aspects of cultural and political identity.</p>
             <div class="hero-buttons">
-                <button>About</button>
-                <button>Gallery</button>
+                <a href="about.html" class="button">About</a>
+                <a href="gallery.html" class="button">Gallery</a>
             </div>
         </section>
     
         <section class="events">
             <h2>Events</h2>
-            <h3>Self-Care and Study GBM</h3>
-            <p>infoinfo</p>
-            <h3>AASA Fun in the Sun</h3>
-            <p>infoinfo</p>
+            <div class="event-card">
+                <h3>Self-Care and Study GBM</h3>
+                <p>Join us for a productive study session with self-care activities!</p>
+            </div>
+            <div class="event-card">
+                <h3>AASA Fun in the Sun</h3>
+                <p>Outdoor activities and games with the Asian American Student Association.</p>
+            </div>
         </section>
     </main>
   
     <footer>
-        <p>&copy; Irene Kim, Jennifer Kwon, Hong Liu COMP 126<p>
+        <p>&copy; Irene Kim, Jennifer Kwon, Hong Liu COMP 126</p>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

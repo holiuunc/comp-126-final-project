@@ -3,17 +3,11 @@
 /* Style Setup */
 
 :root {
-
-    /* These are temporary colors for now, later on we'll change them */
-
     --primary-color: #4B9CD3;
-    --secondary-color: #F2F2F2;
+    --secondary-color: #13294B;
     --tertiary-color: #FFFFFF;
     --text-color: #000000;
-    --accent-color: #FF5733;
-
-    /* To use the colors do the following
-    property: var(--primary-color); or whatever color you want to use */
+    --accent-color: #FDE88B;
 }
 
 h1 {
@@ -22,101 +16,247 @@ h1 {
 
 h2 {
     font: normal 400 1.6875rem "Antonio", sans-serif;
+    color: var(--tertiary-color);
+    text-align: center;
+    margin: 0;
+    padding: 15px 0;
 }
 
 h3 {
     font: normal 400 1.375rem "Antonio", sans-serif;
+    margin: 10px 0;
 }
 
 p, a {
     font: normal 400 1rem "Oxygen", sans-serif;
 }
 
-/* Cleaned up some styling for fonts */
-
-/* Style Setup End */
+/* General Styles */
 
 body {
     margin: 0;
     padding: 0;
-    background-color: var(--secondary-color);
+    background-color: var(--tertiary-color);
     color: var(--text-color);
     font-family: "Oxygen", sans-serif;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 /* Header/Nav */
 
 header {
-    width: 100vw;
+    width: 100%;
     background-color: var(--primary-color);
-    padding: 0px 15px;
-    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
     box-sizing: border-box;
+    position: relative;
+}
+
+.logo-container {
+    padding-left: 15px;
+}
+
+.logo {
+    width: 70px;
+    height: auto;
+}
+
+.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    margin-right: 20px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.bar {
+    height: 4px;
+    width: 100%;
+    background-color: var(--secondary-color);
+    border-radius: 2px;
+}
+
+.nav-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--primary-color);
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.nav-menu.active {
+    max-height: 300px;
 }
 
 .nav-items {
-    display: flex;
-    flex-direction: column;
     list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-items li {
+    padding: 15px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .nav-items a {
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--secondary-color);
+    font-weight: bold;
 }
 
-section.hero {
+/* Main content */
+main {
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* Hero Section */
+
+.hero {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.main-logo {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.hero p {
     margin-bottom: 20px;
 }
 
-button {
-    margin: 10px;
-    border-radius: 5px;
-    width: 100px;
-}
-
-img {
-    width: 50%;
-}
-
-div.hero-buttons {
+.hero-buttons {
     display: flex;
-    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
-section.events {
-    border: solid black;
+.button {
+    padding: 10px 30px;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    text-decoration: none;
     border-radius: 5px;
-    padding: 10px;
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Events Section */
+
+.events {
+    background-color: var(--secondary-color);
+    padding: 10px 20px 30px;
     margin-bottom: 20px;
 }
+
+.event-card {
+    background-color: var(--tertiary-color);
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+/* Footer */
 
 footer {
-    width: 100vw;
+    width: 100%;
+    box-sizing: border-box;
     background-color: var(--primary-color);
-    padding: 0px 15px;
+    padding: 15px;
+    text-align: center;
+    margin-top: auto;
 }
 
-@media screen and (min-width: 640px) {
+/* Desktop Styles */
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 2.2rem;
+    }
+    
+    h3 {
+        font-size: 1.8rem;
+    }
+    
+    p, a {
+        font-size: 1.2rem;
+    }
+    
+    .nav-items a {
+        font-size: 1.3rem;
+    }
+    
+    .button {
+        font-size: 1.25rem;
+        padding: 12px 35px;
+    }
 
-    header {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+    .hamburger-menu {
+        display: none;
+    }
+
+    .nav-menu {
+        position: static;
+        max-height: none;
+        width: auto;
     }
 
     .nav-items {
+        display: flex;
         flex-direction: row;
     }
 
     .nav-items li {
-        margin-left: 15px;
+        padding: 0 15px;
+        border-top: none;
+    }
+
+    .main-logo {
+        width: 80%;
+        max-width: 1000px;
+    }
+
+    .events {
+        margin: 0 auto 20px;
+        border-radius: 8px;
+    }
+
+    main {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .hero-buttons {
+        width: 100%;
+        padding: 0 15%;
     }
 }
