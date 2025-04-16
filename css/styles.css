@@ -8,6 +8,8 @@
     --tertiary-color: #FFFFFF;
     --text-color: #000000;
     --accent-color: #FDE88B;
+
+    /* use var(--primary-color) to use primary color and var(--secondary-color) to use secondary color etc */
 }
 
 h1 {
@@ -57,6 +59,7 @@ header {
     padding: 10px 0;
     box-sizing: border-box;
     position: relative;
+    z-index: 4;
 }
 
 .logo-container {
@@ -76,7 +79,7 @@ header {
     height: 21px;
     margin-right: 20px;
     cursor: pointer;
-    z-index: 2;
+    z-index: 5;
 }
 
 .bar {
@@ -95,6 +98,7 @@ header {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
+    z-index: 3;
 }
 
 .nav-menu.active {
@@ -108,7 +112,7 @@ header {
 }
 
 .nav-items li {
-    padding: 15px;
+    padding: 0;
     text-align: center;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -117,6 +121,9 @@ header {
     text-decoration: none;
     color: var(--secondary-color);
     font-weight: bold;
+    display: block;
+    width: 100%;
+    padding: 15px;
 }
 
 /* Main content */
@@ -125,6 +132,8 @@ main {
     box-sizing: border-box;
     overflow-x: hidden;
 }
+
+/* ========= Home Page ========= */
 
 /* Hero Section */
 
@@ -182,6 +191,119 @@ main {
     margin-bottom: 20px;
 }
 
+/* ========= End Home Page ========= */
+
+
+/* ========= About Page ========= */
+
+/* Executives Section */
+
+section.executives {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.executives h1 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.executives {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.executive-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Card flip */
+.executive-card {
+    width: calc(50% - 20px);
+    max-width: 300px;
+    height: 380px;
+    margin: 10px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.card-inner.flipped {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-front {
+    background-color: var(--tertiary-color);
+    color: var(--secondary-color);
+    z-index: 2;
+}
+
+.card-back {
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
+    transform: rotateY(180deg);
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.card-front h3 {
+    background-color: var(--primary-color);
+    color: var(--tertiary-color);
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.card-image {
+    width: 100%;
+    height: 220px;
+    background-size: cover;
+    background-position: center 60%;
+}
+
+.card-front p {
+    padding: 10px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.card-back p {
+    font-size: 1.1rem;
+}
+
 /* FAQ Section */
 
 .faq {
@@ -189,7 +311,25 @@ main {
     flex-direction: column;
 }
 
-/* Footer */
+/* ========= End About Page ========= */
+
+
+/* ========= Gallery Page ========= */
+
+
+
+
+/* ========= End Gallery Page ========= */
+
+
+/* ========= QR Codes Page ========= */
+
+
+
+/* ========= End QR Codes Page ========= */
+
+
+/* ========= Footer ========= */
 
 footer {
     width: 100%;
@@ -199,6 +339,7 @@ footer {
     text-align: center;
     margin-top: auto;
 }
+
 
 /* Desktop Styles */
 @media screen and (min-width: 768px) {
@@ -235,6 +376,7 @@ footer {
         position: static;
         max-height: none;
         width: auto;
+        margin-right: 15px;
     }
 
     .nav-items {
@@ -243,8 +385,16 @@ footer {
     }
 
     .nav-items li {
-        padding: 0 15px;
+        padding: 0;
         border-top: none;
+    }
+
+    .nav-items a {
+        padding: 15px;
+    }
+
+    .nav-items li:last-child {
+        margin-right: 10px;
     }
 
     .main-logo {
@@ -265,5 +415,32 @@ footer {
     .hero-buttons {
         width: 100%;
         padding: 0 15%;
+    }
+
+    .executive-cards-container {
+        justify-content: center;
+    }
+    
+    .executive-card {
+        width: calc(33.333% - 20px);
+        max-width: 350px;
+    }
+
+    header {
+        padding: 10px 20px;
+        box-sizing: border-box;
+    }
+}
+
+
+/* Mobile Small Styles */
+@media screen and (max-width: 575px) {
+    .executive-card {
+        width: calc(100% - 20px);
+        max-width: 320px;
+    }
+    
+    .card-image {
+        height: 240px;
     }
 }
