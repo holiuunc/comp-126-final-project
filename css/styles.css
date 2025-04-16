@@ -316,7 +316,28 @@ section.executives {
 
 /* ========= Gallery Page ========= */
 
+.gallery-page {
+    padding: 20px;
+}
 
+.gallery-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery-event {
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery-h2 {
+    color: var(--text-color);
+    text-align: left;
+}
+
+.gallery-image {
+    width: 100%;
+}
 
 
 /* ========= End Gallery Page ========= */
@@ -430,6 +451,16 @@ footer {
         padding: 10px 20px;
         box-sizing: border-box;
     }
+
+    /* Gallery */
+    .gallery-card {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .gallery-event {
+        max-width: 400px;
+    }
 }
 
 
@@ -443,4 +474,5 @@ footer {
     .card-image {
         height: 240px;
     }
+
 }
