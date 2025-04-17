@@ -364,6 +364,28 @@ section.executives {
 /* ========= QR Codes Page ========= */
 
 
+.qr-section {
+    padding: 1rem;
+    text-align: center;
+}
+
+.qrcodes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.qr-image {
+    max-width: 40%;
+    height: auto;
+}
+
+
+
+
+
+
 
 /* ========= End QR Codes Page ========= */
 
@@ -479,6 +501,24 @@ footer {
     .gallery-event {
         max-width: 400px;
     }
+
+    /* QR Codes */
+    .qr-section {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .qrcodes {
+        width: 45%;
+        margin: 1rem;
+    }
+
+    .qr-image {
+        max-width: 300px;
+    }
+
 }
 
 
@@ -494,3 +534,4 @@ footer {
     }
 
 }
+
