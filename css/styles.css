@@ -14,6 +14,7 @@
 
 h1 {
     font: normal 400 1.875rem "Anton", sans-serif;
+    text-align: center;
 }
 
 h2 {
@@ -377,7 +378,7 @@ section.executives {
 }
 
 .qr-image {
-    max-width: 40%;
+    max-width: 50%;
     height: auto;
 }
 
@@ -403,7 +404,7 @@ footer {
 
 
 /* Desktop Styles */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 895px) {
     h1 {
         font-size: 2.5rem;
     }
@@ -522,7 +523,7 @@ footer {
 }
 
 
-/* Mobile Small Styles */
+/* Smaller Mobile Styles */
 @media screen and (max-width: 575px) {
     .executive-card {
         width: calc(100% - 20px);
