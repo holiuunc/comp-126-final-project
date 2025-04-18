@@ -307,12 +307,13 @@ section.executives {
 
 /* FAQ Section */
 
-.faq-container {
+.accordion {
     display: flex;
     flex-direction: column;
     background-color: var(--accent-color);
     border-radius: 5px;
     margin: 0px 30px 20px 30px;
+    padding: 15px
 }
 
 .faq-h2 {
@@ -320,12 +321,52 @@ section.executives {
 }
 
 .faq-card {
-    padding: 5px 15px;
+    list-style: none;
+    width: 100%;
+    margin-bottom: 15px;
 }
 
-#faq-border {
+#faq-bottom {
+    margin-bottom: 5px;
+}
+
+.faq-q {
+    display: flex;
+    align-items: center;
+    font: normal 400 1.375rem "Antonio", sans-serif;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+label::before{
+    content: "+";
+    margin-right: 10px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.accordion .content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s content 0.5s;
+}
+
+.accordion input[type="checkbox"]:checked + label + .content{
+    max-height: 400px;
+}
+
+.accordion input[type="checkbox"]:checked + label::before{
+    content: "-";
+}
+
+#faq-middle {
     border-top: solid black 1px;
     border-bottom: solid black 1px;
+    padding: 15px 0px;
 }
 
 
