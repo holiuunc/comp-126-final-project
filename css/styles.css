@@ -371,6 +371,54 @@ input[type="checkbox"] {
 
 
 
+/* Contact Us Section */
+
+.form-h2 {
+    color: var(--text-color);
+}
+
+.form {
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 450px;
+    margin: 0 auto 3rem auto;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+form div {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form label {
+    color: white;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.form label[for="name"]::after,
+.form label[for="email"]::after,
+.form label[for="ask-us"]::after {
+    content: "*";
+    color: red;
+    margin-left: 0.25rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="textarea"]{
+    padding: 0.75rem;
+    border-radius: 8px;
+}
+
+input[type="textarea"]{
+    height: 120px;
+}
+
+
 /* ========= End About Page ========= */
 
 
@@ -532,6 +580,13 @@ footer {
     header {
         padding: 10px 20px;
         box-sizing: border-box;
+    }
+
+
+    /* Contact Us */
+
+    .form {
+        max-width: 70%;
     }
 
     /* Gallery */
