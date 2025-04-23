@@ -397,6 +397,7 @@ form div {
     color: white;
     margin-bottom: 0.5rem;
     position: relative;
+    font: normal 400 1rem "Oxygen", sans-serif;
 }
 
 .form label[for="name"]::after,
@@ -412,10 +413,29 @@ input[type="email"],
 input[type="textarea"]{
     padding: 0.75rem;
     border-radius: 8px;
+    
 }
 
-input[type="textarea"]{
-    height: 120px;
+textarea {
+    padding: 0.75rem;
+    border-radius: 8px;
+    height: 150px;
+    resize: vertical;
+    line-height: 1.5;
+}
+
+button[type="submit"] {
+    background-color: var(--tertiary-color);
+    color: #000000;
+    border-radius: 8px;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font: normal 400 1rem "Oxygen", sans-serif;
+}
+
+button[type="submit"]:hover {
+    background-color: rgb(219, 214, 209);
 }
 
 
