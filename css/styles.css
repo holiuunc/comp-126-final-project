@@ -473,6 +473,9 @@ button[type="submit"]:hover {
 
 /* ========= QR Codes Page ========= */
 
+.qr-p {
+    text-align: center;
+}
 
 .qr-section {
     padding: 1rem;
@@ -487,7 +490,7 @@ button[type="submit"]:hover {
 }
 
 .qr-image {
-    max-width: 50%;
+    max-width: 40%;
     height: auto;
 }
 
