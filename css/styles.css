@@ -338,7 +338,7 @@ section.executives {
     margin-left: 10px;
 }
 
-label::before{
+.accordion label::before{
     content: "+";
     margin-right: 10px;
     font-size: 24px;
