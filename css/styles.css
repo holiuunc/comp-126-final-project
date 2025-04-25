@@ -701,5 +701,9 @@ footer {
         height: 240px;
     }
 
+    .form {
+        width: 90%;
+        max-width: 400px;
+    }
 }
 
