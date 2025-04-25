@@ -382,7 +382,7 @@ input[type="checkbox"] {
     padding: 2rem;
     border-radius: 12px;
     width: 90%;
-    max-width: 450px;
+    max-width: 400px;
     margin: 0 auto 3rem auto;
     box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2);
 }
@@ -404,7 +404,7 @@ form div {
 .form label[for="email"]::after,
 .form label[for="ask-us"]::after {
     content: "*";
-    color: red;
+    color: rgb(255, 0, 0);
     margin-left: 0.25rem;
 }
 
