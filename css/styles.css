@@ -8,8 +8,6 @@
     --tertiary-color: #FFFFFF;
     --text-color: #000000;
     --accent-color: #FDE88B;
-
-    /* use var(--primary-color) to use primary color and var(--secondary-color) to use secondary color etc */
 }
 
 h1 {
@@ -134,8 +132,6 @@ main {
     overflow-x: hidden;
 }
 
-/* ========= Home Page ========= */
-
 /* Hero Section */
 
 .hero {
@@ -191,11 +187,6 @@ main {
     padding: 15px;
     margin-bottom: 20px;
 }
-
-/* ========= End Home Page ========= */
-
-
-/* ========= About Page ========= */
 
 /* Executives Section */
 
@@ -370,7 +361,6 @@ input[type="checkbox"] {
 }
 
 
-
 /* Contact Us Section */
 
 .form-h2 {
@@ -428,7 +418,6 @@ button[type="submit"] {
     background-color: var(--tertiary-color);
     color: #000000;
     border-radius: 8px;
-    font-size: 1rem;
     padding: 0.5rem 1rem;
     cursor: pointer;
     font: normal 400 1rem "Oxygen", sans-serif;
@@ -439,9 +428,6 @@ button[type="submit"]:hover {
 }
 
 
-/* ========= End About Page ========= */
-
-
 /* ========= Gallery Page ========= */
 
 .gallery-page {
@@ -450,10 +436,14 @@ button[type="submit"]:hover {
 
 .gallery-card {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
 .gallery-event {
+    flex: 1 1 320px;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
 }
@@ -465,10 +455,9 @@ button[type="submit"]:hover {
 
 .gallery-image {
     width: 100%;
+    height: auto;
+    object-fit: cover;
 }
-
-
-/* ========= End Gallery Page ========= */
 
 
 /* ========= QR Codes Page ========= */
@@ -544,9 +533,6 @@ button[type="submit"]:hover {
     opacity: 1;
     pointer-events: auto;
 }
-
-
-
 
 /* ========= End QR Codes Page ========= */
 
@@ -660,16 +646,7 @@ footer {
         max-width: 70%;
     }
 
-    /* Gallery */
-    .gallery-card {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .gallery-event {
-        max-width: 350px;
-    }
-
+    
     /* QR Codes */
     .qr-section {
         display: flex;
